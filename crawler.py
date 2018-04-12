@@ -6,12 +6,9 @@ req.add_header('User-Agent','Mozilla/5.0 (X11;Ubuntu;Linux x86_64;rv:31.0) Gecko
 req.add_header('Referer','http://www.budejie.com/text/1')
 resp = urllib2.urlopen(req)
 
-#print resp.geturl()
-#print resp.getcode()
 
 html = resp.read().decode('utf-8')
 
-#print html
 
 pattern = re.compile(r'<div class="j-r-list-c-desc">\s+(.*)\s+</div>')
 subpattern = re.compile(r'<.*?>')
